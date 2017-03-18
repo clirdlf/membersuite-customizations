@@ -29,6 +29,11 @@ In case something goes wrong, the default template is this:
     </div>
 ```
 
+## Get a copy
+
+```
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://customer26007fb00.portal.membersuite.com/Login.aspx
+```
 
 ## Testing the CSS
 
