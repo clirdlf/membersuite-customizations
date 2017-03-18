@@ -32,15 +32,22 @@ In case something goes wrong, the default template is this:
 ## Get a copy
 
 ```
-wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://customer26007fb00.portal.membersuite.com/Login.aspx
+$ wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://customer26007fb00.portal.membersuite.com/Login.aspx
 ```
 
-## Testing the CSS
+## Development Setup
 
-```
-$ sass --watch _scss/style.scss:css/style.css --style compressed
-```
+You will need PHP and Ruby to run this project. Ruby dependencies can be installed with `bundle`.
 
-```
-$ php -S localhost:8000
-```
+## Development
+
+- Start up the processes (`foreman start`).
+- Remove the hard-coded CSS in `customer26007fb00.portal.membersuite.com/Login.aspx.html` (around line 106)
+- Link to the css file (`<link href="../css/style.css"`)
+- Open your browser to <http://localhost:8000/customer26007fb00.portal.membersuite.com/Login.aspx.html>
+- Edit `_scss/style.css`
+
+### Portal
+
+- Log on to MemberSuite and update the Portal (under **Settings**)
+- Copy the contents of `css/style.css` in to the custom CSS field
