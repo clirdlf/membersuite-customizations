@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head id="Head1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="description" /><meta http-equiv="keywords" /><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="App_Master/GeneralPage.css" /><link rel="stylesheet" type="text/css" href="App_Master/DataPage.css" /><link rel="stylesheet" type="text/css" href="/images/icons.css" /><link rel="stylesheet" type="text/css" href="/images/portal.css" />
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
+    <script type="text/javascript" src="/js/portal.js"></script>
+<link href="App_Themes/Blue/Skin.css" type="text/css" rel="stylesheet" /><link href="/WebResource.axd?d=n6AY3WBgAf-_qTwX_y4VekneFgrE-OfXjX7GsZUdzrEI51d_rAFy_KrJDJYwdFPhpIef7ZEBWIBSFKEJynnKGoI3-ohGh-GnmgnIAakHVOtjoeH6TCg_sYQABLVmILeH0yHYRXDzCN9LVkHX5pvBag2&amp;t=636246688780888351" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=bsAubKwTkRWjFHqno8DfbwH7XpG06ox3tQnRFHhSlsyLYhsgCsFmSgiI07Px9pLa7Q7lFdKi6Wc5Fvw8YozT1ccuSMVkQRbTV_06kPPLmQeYJYXAfh5g8RRp5IpTaxc5LEk-wQBlkkxf2Wb6LqaEUMnoLUllkkdULWgfHUx-k401&amp;t=636246688780888351" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><title>
+
+</title></head>
+<body>
+    <!-- site wrapper -->
+    <form method="post" action="./Login.aspx?redirectURL=%2fdefault.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI5NTIzNTUxNQ9kFgJmD2QWAgIDD2QWGAIDDxQrAAIUKwADDxYCHhdFbmFibGVBamF4U2tpblJlbmRlcmluZ2hkZGRkZAIFDxQrAAMPFgIfAGhkZGRkAgcPFgIeB1Zpc2libGVoZAIKDxYCHgRUZXh0BYAhQGltcG9ydCAiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVJvYm90bytTbGFiOjQwMCwxMDAsMzAwLDcwMHxMYXRvOjQwMCwxMDAsMzAwLDcwMCw5MDAiOw0KQGltcG9ydCAiaHR0cHM6Ly9jZG4ucmF3Z2l0LmNvbS9jbGlyZGxmL2xvZ28tZm9udHMvbWFzdGVyL3N0eWxlLm1pbi5jc3MiOw0KQGltcG9ydCAiaHR0cHM6Ly9jZG4ucmF3Z2l0LmNvbS9jbGlyZGxmL2xvZ28tZm9udHMvbWFzdGVyL2NsaXItZm9udC9zdHlsZXNoZWV0Lm1pbi5jc3MiOw0KI3NpdGVDb250ZW50Q29udFdyYXBwZXIgew0KICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOw0KICB3aWR0aDogOTIwcHg7DQogIG1hcmdpbjogMCBhdXRvOw0KICBib3gtc2hhZG93OiAwIDVweCA1MHB4IHJnYmEoMCwgMCwgMCwgMC40KTsgfQ0KICAjc2l0ZUNvbnRlbnRDb250V3JhcHBlciAjc2l0ZUNvbnRlbnRXcmFwcGVyIHsNCiAgICBtYXJnaW4tdG9wOiAxMHB4Ow0KICAgIHBhZGRpbmc6IDE1cHggMzBweDsgfQ0KDQp0aCB7DQogIG1hcmdpbi10b3A6IDA7DQogIGJvcmRlci1yYWRpdXM6IDVweCA1cHggMCAwOw0KICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOw0KICBmb250LXdlaWdodDogNDAwOw0KICBsZXR0ZXItc3BhY2luZzogMXB4Ow0KICBmb250LXNpemU6IDEuNGVtOw0KICBsaW5lLWhlaWdodDogMS41ZW07DQogIGRpc3BsYXk6IGJsb2NrOyB9DQoNCnRkIHsNCiAgbGluZS1oZWlnaHQ6IDI1LjZweDsgfQ0KDQojUGFnZUNvbnRlbnRfaGxGb3Jnb3RQYXNzd29yZCB7DQogIGZvbnQtc2l6ZTogMC44ZW07DQogIG1hcmdpbjogMjBweCAwIDA7IH0NCg0KI1BhZ2VDb250ZW50X2hsQ3JlYXRlQWNjb3VudCB7DQogIHRleHQtYWxpZ246IGNlbnRlcjsgfQ0KDQppbnB1dCNQYWdlQ29udGVudF90YkxvZ2luSUQsIGlucHV0I1BhZ2VDb250ZW50X3RiUGFzc3dvcmQgew0KICBtYXJnaW4tYm90dG9tOiAyMHB4Ow0KICBwYWRkaW5nOiA4cHg7DQogIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7DQogIGJvcmRlci1yYWRpdXM6IDJweDsNCiAgZm9udC1zaXplOiAuOWVtOw0KICBjb2xvcjogIzg4ODsgfQ0KDQppbnB1dFt0eXBlPSJzdWJtaXQiXSB7DQogIG1hcmdpbi10b3A6IDBweDsNCiAgYm9yZGVyOiAwOw0KICBib3JkZXItcmFkaXVzOiAycHg7DQogIGNvbG9yOiB3aGl0ZTsNCiAgcGFkZGluZzogMTBweDsNCiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsNCiAgZm9udC13ZWlnaHQ6IDQwMDsNCiAgZm9udC1zaXplOiAwLjdlbTsNCiAgbGV0dGVyLXNwYWNpbmc6IDFweDsNCiAgYmFja2dyb3VuZC1jb2xvcjogIzY2NTg1MTsNCiAgY3Vyc29yOiBwb2ludGVyOw0KICBvdXRsaW5lOiBub25lOyB9DQogIGlucHV0W3R5cGU9InN1Ym1pdCJdOmhvdmVyIHsNCiAgICBvcGFjaXR5OiAwLjc7DQogICAgdHJhbnNpdGlvbjogMC41czsgfQ0KDQpib2R5IHsNCiAgYmFja2dyb3VuZDogdXJsKCJodHRwczovL2pvYnMuZGlnbGliLm9yZy93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8wMy9waG90b19iZy5qcGciKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlciBmaXhlZDsNCiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsNCiAgZm9udC1zaXplOiAxNnB4Ow0KICBmb250LWZhbWlseTogJ0xhdG8nLCBzYW5zLXNlcmlmOw0KICBmb250LXdlaWdodDogMzAwOw0KICBtYXJnaW46IDA7DQogIGNvbG9yOiAjNjY2OyB9DQoNCi8qIFR5cG9ncmFwaHkgKi8NCmgxI3RpdGxlIHsNCiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gU2xhYicsIHNlcmlmOw0KICBmb250LXdlaWdodDogMzAwOw0KICBmb250LXNpemU6IDMuMmVtOw0KICBjb2xvcjogd2hpdGU7DQogIHRleHQtc2hhZG93OiAwIDAgMTBweCByZ2JhKDAsIDAsIDAsIDAuOCk7DQogIG1hcmdpbjogMCBhdXRvOw0KICBwYWRkaW5nLXRvcDogMzJweDsNCiAgbWF4LXdpZHRoOiAzMDBweDsNCiAgdGV4dC1hbGlnbjogY2VudGVyOw0KICBwb3NpdGlvbjogcmVsYXRpdmU7DQogIHRvcDogMHB4OyB9DQoNCmgxI3RpdGxlIHNwYW4gc3BhbiB7DQogIGZvbnQtd2VpZ2h0OiA0MDA7IH0NCg0KYSB7DQogIHRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgY29sb3I6ICM2NjY7IH0NCg0KYTpob3ZlciB7DQogIGNvbG9yOiAjYWVhZWFlOyB9DQoNCnAuc21hbGwgew0KICBmb250LXNpemU6IDAuOGVtOw0KICBtYXJnaW46IDIwcHggMCAwOyB9DQoNCi8qIExheW91dCAqLw0KLmNvbnRhaW5lciB7DQogIG1hcmdpbjogMDsgfQ0KDQoudG9wIHsNCiAgbWFyZ2luOiAwOw0KICBwYWRkaW5nOiAwOw0KICB3aWR0aDogMTAwJTsNCiAgYmFja2dyb3VuZDogLW1vei1saW5lYXItZ3JhZGllbnQodG9wLCByZ2JhKDAsIDAsIDAsIDAuNikgMCUsIHRyYW5zcGFyZW50IDEwMCUpOw0KICAvKiBGRjMuNi0xNSAqLw0KICBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudCh0b3AsIHJnYmEoMCwgMCwgMCwgMC42KSAwJSwgdHJhbnNwYXJlbnQgMTAwJSk7DQogIC8qIENocm9tZTEwLTI1LFNhZmFyaTUuMS02ICovDQogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIHJnYmEoMCwgMCwgMCwgMC42KSAwJSwgdHJhbnNwYXJlbnQgMTAwJSk7DQogIC8qIFczQywgSUUxMCssIEZGMTYrLCBDaHJvbWUyNissIE9wZXJhMTIrLCBTYWZhcmk3KyAqLw0KICBmaWx0ZXI6IHByb2dpZDpEWEltYWdlVHJhbnNmb3JtLk1pY3Jvc29mdC5ncmFkaWVudCggc3RhcnRDb2xvcnN0cj0nIzk5MDAwMDAwJywgZW5kQ29sb3JzdHI9JyMwMDAwMDAwMCcsR3JhZGllbnRUeXBlPTAgKTsNCiAgLyogSUU2LTkgKi8gfQ0KDQoubG9naW4tYm94IHsNCiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7DQogIG1heC13aWR0aDogMzQwcHg7DQogIG1hcmdpbjogMCBhdXRvOw0KICBwb3NpdGlvbjogcmVsYXRpdmU7DQogIHRvcDogODBweDsNCiAgcGFkZGluZy1ib3R0b206IDMwcHg7DQogIGJvcmRlci1yYWRpdXM6IDVweDsNCiAgYm94LXNoYWRvdzogMCA1cHggNTBweCByZ2JhKDAsIDAsIDAsIDAuNCk7DQogIHRleHQtYWxpZ246IGNlbnRlcjsgfQ0KDQoubG9naW4tYm94IC5ib3gtaGVhZGVyIHsNCiAgYmFja2dyb3VuZC1jb2xvcjogIzY2NTg1MTsNCiAgbWFyZ2luLXRvcDogMDsNCiAgYm9yZGVyLXJhZGl1czogNXB4IDVweCAwIDA7IH0NCg0KLmxvZ2luLWJveCBsYWJlbCB7DQogIGZvbnQtd2VpZ2h0OiA3MDA7DQogIGZvbnQtc2l6ZTogLjhlbTsNCiAgY29sb3I6ICM4ODg7DQogIGxldHRlci1zcGFjaW5nOiAxcHg7DQogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7DQogIGxpbmUtaGVpZ2h0OiAyZW07IH0NCg0KLmxvZ2luLWJveCBpbnB1dCB7DQogIG1hcmdpbi1ib3R0b206IDIwcHg7DQogIHBhZGRpbmc6IDhweDsNCiAgYm9yZGVyOiAxcHggc29saWQgI2NjYzsNCiAgYm9yZGVyLXJhZGl1czogMnB4Ow0KICBmb250LXNpemU6IC45ZW07DQogIGNvbG9yOiAjODg4OyB9DQoNCi5sb2dpbi1ib3ggaW5wdXQ6Zm9jdXMgew0KICBvdXRsaW5lOiBub25lOw0KICBib3JkZXItY29sb3I6ICM2NjU4NTE7DQogIHRyYW5zaXRpb246IDAuNXM7DQogIGNvbG9yOiAjNjY1ODUxOyB9DQoNCi5sb2dpbi1ib3ggYnV0dG9uIHsNCiAgbWFyZ2luLXRvcDogMHB4Ow0KICBib3JkZXI6IDA7DQogIGJvcmRlci1yYWRpdXM6IDJweDsNCiAgY29sb3I6IHdoaXRlOw0KICBwYWRkaW5nOiAxMHB4Ow0KICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOw0KICBmb250LXdlaWdodDogNDAwOw0KICBmb250LXNpemU6IDAuN2VtOw0KICBsZXR0ZXItc3BhY2luZzogMXB4Ow0KICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjY1ODUxOw0KICBjdXJzb3I6IHBvaW50ZXI7DQogIG91dGxpbmU6IG5vbmU7IH0NCg0KLmxvZ2luLWJveCBidXR0b246aG92ZXIgew0KICBvcGFjaXR5OiAwLjc7DQogIHRyYW5zaXRpb246IDAuNXM7IH0NCg0KLmxvZ2luLWJveCBidXR0b246aG92ZXIgew0KICBvcGFjaXR5OiAwLjc7DQogIHRyYW5zaXRpb246IDAuNXM7IH0NCg0KLnNlbGVjdGVkIHsNCiAgY29sb3I6ICM2NjU4NTEgIWltcG9ydGFudDsNCiAgdHJhbnNpdGlvbjogMC41czsgfQ0KDQovKiBBbmltYXRpb24gRGVsYXkgKi8NCiNsb2dvIHsNCiAgLXdlYmtpdC1hbmltYXRpb24tZHVyYXRpb246IDFzOw0KICAtd2Via2l0LWFuaW1hdGlvbi1kZWxheTogMnM7IH0NCg0KLmxvZ2luLWJveCB7DQogIC13ZWJraXQtYW5pbWF0aW9uLWR1cmF0aW9uOiAxczsNCiAgLXdlYmtpdC1hbmltYXRpb24tZGVsYXk6IDFzOyB9ZAIMDxYCHwIFlQE8ZGl2IGNsYXNzPSJjb250YWluZXIiPg0KCQk8ZGl2IGNsYXNzPSJ0b3AiPg0KCQkJPGgxIGlkPSJ0aXRsZSIgY2xhc3M9ImhpZGRlbiI+PHNwYW4gaWQ9ImxvZ28iPkNMSVIrRExGIDxzcGFuPlBvcnRhbDwvc3Bhbj48L3NwYW4+PC9oMT4NCgkJPC9kaXY+DQoJCWQCDg9kFgYCAQ9kFgICAQ8WAh8CBQVMb2dpbmQCAw8WAh8BaGQCBA8WAh8BaGQCEg8WAh8BaGQCFA8PFgIfAWhkZAIYD2QWAgIBDxYCHwIFBENMSVJkAiAPZBYIAhsPFgIfAWhkAh0PFgIfAWhkAh8PFgIeC18hSXRlbUNvdW50ZmQCIQ8WAh8CBeECPHA+V2l0aCB0aGlzIHBvcnRhbCwgeW91IHdpbGwgaGF2ZSB0aGUgY2FwYWJpbGl0eSB0byB1cGRhdGUgeW91ciBvd24gbWVtYmVyc2hpcCBpbmZvcm1hdGlvbiwgcmVuZXcgeW91ciBtZW1iZXJzaGlwLCBhbmQgcmVnaXN0ZXIgZm9yIGV2ZW50cy48L3A+DQo8cD5QbGVhc2UgbG9nIGluIHdpdGggeW91ciB1c2VybmFtZSBhbmQgcGFzc3dvcmQgaW4gdGhlIGJveCB0byB0aGUgbGVmdC4gSWYgeW91IGRvbid0IGtub3cgeW91ciBwYXNzd29yZCwgb3IgeW91J3ZlIGZvcmdvdHRlbiBpdCwNCjxzdHJvbmc+PGEgaHJlZj0iL0ZvcmdvdFBhc3N3b3JkLmFzcHgiPnJlc2V0IHlvdXIgcGFzc3dvcmQ8L2E+PC9zdHJvbmc+LjwvcD5kAiQPZBYCAgMPDxYCHwIFCTQuMjIuMi45MmRkAiYPFgIfAgUIDQo8L2Rpdj5kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBRZjdGwwMCRyd21XaW5kb3dNYW5hZ2VyBRZjdGwwMCRyd1RpbWVvdXRXYXJuaW5n3YnVVWIzNZfaBL0qyIelb8r+SQc/EEZKMh9UDUndwrg=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=hteBRFn1MTUnjp2ovqnUMKmOWuQ9Pl4cKdCH0b0bkMsxg0mudO2U8rgFL0GyG0VnvGAAhUcbTcH5wP1Cc2dIciw3hW-01XD0a7BKnRsfu0c1&amp;t=635875329181218729" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=ddwSBiBZoYmGLV-pK-JQwuiC9dT86gWs3w-ncR6m8abPXGYth5ymTRVFs_DPAMHM_P2855ZroPwrOGwIgh2si4tWjpUHqi0jtAlav7VmhPH-Wp8ynn_sjd9-six_t3SmE2QRkUx6V3YIGYNxtszdhC36jTyW53KztZYa2_wHt041&amp;t=1c6690ce" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=M_l4SxAtVwLiNFs-6DpPPSDvguHvYK8ck-7CREPyLNOM2kP-ZM6Qfypkwr01TC-J4XGAlD4F-phXSQiNmaV-jwC4n-WxhumAvXSI7PsO5L9Oq11oL0i-zykPjw-DJdBJGnUsaZT6XbnqgZdqPMmiyYxVyCwtVrSVbknUInqapew1&amp;t=ffffffffeea0dba9" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=0S0mnf-Gp8HiYzd7_DHb8RNjmqyZy48TW3Md-WpZYNtgU_OeCFh3yzggGVAHZVWOR999OIN1SOuUfZWlOaeMZ2R1G20wKdbGm7gglD0OEbt9EnKfCD-yfqQE79zuu53aCvz0uLnXI0EAuD_M6Upfk_pmzDAp03Yc25aj-blwHYZwStX5Zsvg1w2X-dWLTwlk0&amp;t=ffffffffeea0dba9" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4-k08E4xS-IL_9suydzIqFl5bzeGshFE-INHgBigyaz5rMaAVuENSPOUG8pGsE6ml142LKoollqMA_H3pMJxfIbGyR8P729wjJh0DGx4NjtSb-Tu_dBMXL1mHWkmptYyY0ro2Iz7B1UZTVjBJYnbIg2&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uBUD4U6Ci1gTXPc3XWjsER9TaXFHk_W9T_yh2DvqclHahG62wu7bUwF3iiyVFNr2-KjTJip3X-ea_C-_VjSeODIq8S2JpP0iLIH-V6X8uXzgxgEMn3v0qlhHZ622L_ds2Se4kdfzABP3xJHqeTC0Ckh44aOKza5_dOr8eYNCrtA1&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=UA3-c4XsmT21cBESs3MVxI9mgLFjuJQNJlX82vN5Ta5PXXGPMvFHiqcdX9__OXZJgflPGPOChY72XJgWXT99CDbxtd2fZ8EZZBDLCg_G61gol_IB54rTCsNrm-YJAGMPbtwb5AVh5ioayb3Az-Q3Tg2&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Cn4VuyWSYkWSsngD47RKkMzQKe3e_6tSxmaGFtv23mlRU1dY9M1bgUzXAkAerGELWIvaH1qX7qWx54J8CMUUZQKUX45Ok197Ipz8LDC6jFpXTui3iR2z437vMKV4nUI2xSftRr8_gw-mMRusEMemmw2&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=UdHxdPEbvPWDqk_h1u3C2TYlKN_-MOTiOQarrsK5a8vcT-mP9lk6xK1NOwhzImV1dXjFAo5iUfQBQFpw9W3kpbv-I_CKCQaEyOLsAoQBHp2TBT7vytPK8Dc8wL9Rk6POH0tQfs7PW7YRoiSnkSvD69q8n6qEHF3tqs1b0loHPvw1&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=YFAp_CG84VF9JIpouObs193g2wMql_5dqYltZOkWm3g0fLFdFFn00LXr866VfEW5GEYX2o1Q9DQ1jrHe9BdfWGcpYCgmV9PNE_IJPu778belK4fyAOeSj5e-L_0y7wb9i5wTRJCX4QqgDTOQyWVPv6ng0uzKSLLH7vP2aIP4-VM1&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=jM0npHutc6QOccYZtpjphS069NEUug5b2EZbNOE9l2ZGEM3oSNwy--5XowR63Ao3on3-8Rcn97Lwj-PvuHsMDAFqOR1FYmbIq_lcftdtmS18i56fsDhwjvN2jCB5SBJ9SEG3XZrYAuu4YSCPRJZTmrP3y7aKWBm-aBKm_y2PXlk1&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=UayqeDnPgidgB-9QVig6Zryxs8D0nSLYIkk8j2s7NXfqiPGoZK1N4VGBc54MHCqxQOCWCbIiPpKJSBha2JrjhhgYLtbioRk9E-bXJc4llxGwRTTB8kxnIKSQOPRbHcvk9PmuxSQ0ACf42S4Iy0sQk48xbg-Rhlg0DrJion-F_bE1&amp;t=ffffffffe1a1d5d2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARwRGjPMaoXkd92PUUCFlJMOizmVF5pt9nNzFQHqH/FL0rymFUX0fY6PuQ5DsAUetb6qiP26pgIE8Q4tnllgaVBHK4dQzNivEme2ivV8keMuyu5YiTtdh1CnLasyeeKvpo=" />
+</div>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            document.title = $("#pageTitleCont h1").text();
+        });
+        </script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="ctl00_rwmWindowManager" style="display:none;">
+	<!-- 2011.1.519.40 --><div id="ctl00_rwmWindowManager_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_rwmWindowManager_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_rwmWindowManager_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_rwmWindowManager_ClientState" name="ctl00_rwmWindowManager_ClientState" type="hidden" />
+</div>
+    <div id="ctl00_rwTimeoutWarning" style="display:none;">
+	<div id="ctl00_rwTimeoutWarning_C">
+
+	</div><input id="ctl00_rwTimeoutWarning_ClientState" name="ctl00_rwTimeoutWarning_ClientState" type="hidden" />
+</div>
+    <!-- Inline Styles -->
+    <style type="text/css">
+          
+    
+#siteContentWrapper
+{
+	padding: 20px 0px 30px 20px;
+	width: 870px;
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+}
+    @import "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900";
+@import "https://cdn.rawgit.com/clirdlf/logo-fonts/master/style.min.css";
+@import "https://cdn.rawgit.com/clirdlf/logo-fonts/master/clir-font/stylesheet.min.css";
+#siteContentContWrapper {
+  background-color: #fff;
+  width: 920px;
+  margin: 0 auto;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.4); }
+  #siteContentContWrapper #siteContentWrapper {
+    margin-top: 10px;
+    padding: 15px 30px; }
+
+th {
+  margin-top: 0;
+  border-radius: 5px 5px 0 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  display: block; }
+
+td {
+  line-height: 25.6px; }
+
+#PageContent_hlForgotPassword {
+  font-size: 0.8em;
+  margin: 20px 0 0; }
+
+#PageContent_hlCreateAccount {
+  text-align: center; }
+
+input#PageContent_tbLoginID, input#PageContent_tbPassword {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: .9em;
+  color: #888; }
+
+input[type="submit"] {
+  margin-top: 0px;
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  background-color: #665851;
+  cursor: pointer;
+  outline: none; }
+  input[type="submit"]:hover {
+    opacity: 0.7;
+    transition: 0.5s; }
+
+body {
+  background: url("https://jobs.diglib.org/wp-content/uploads/2017/03/photo_bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  color: #666; }
+
+/* Typography */
+h1#title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 3.2em;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  padding-top: 32px;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  top: 0px; }
+
+h1#title span span {
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+a:hover {
+  color: #aeaeae; }
+
+p.small {
+  font-size: 0.8em;
+  margin: 20px 0 0; }
+
+/* Layout */
+.container {
+  margin: 0; }
+
+.top {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */ }
+
+.login-box {
+  background-color: white;
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative;
+  top: 80px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.4);
+  text-align: center; }
+
+.login-box .box-header {
+  background-color: #665851;
+  margin-top: 0;
+  border-radius: 5px 5px 0 0; }
+
+.login-box label {
+  font-weight: 700;
+  font-size: .8em;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 2em; }
+
+.login-box input {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: .9em;
+  color: #888; }
+
+.login-box input:focus {
+  outline: none;
+  border-color: #665851;
+  transition: 0.5s;
+  color: #665851; }
+
+.login-box button {
+  margin-top: 0px;
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  background-color: #665851;
+  cursor: pointer;
+  outline: none; }
+
+.login-box button:hover {
+  opacity: 0.7;
+  transition: 0.5s; }
+
+.login-box button:hover {
+  opacity: 0.7;
+  transition: 0.5s; }
+
+.selected {
+  color: #665851 !important;
+  transition: 0.5s; }
+
+/* Animation Delay */
+#logo {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s; }
+
+.login-box {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s; }
+    </style>
+    <div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">CLIR+DLF <span>Portal</span></span></h1>
+		</div>
+		
+    <div id="SkinBodyContent">
+        <!-- / site header -->
+        <!-- primary navigation -->
+        
+            <div id="priNavCont">
+                <div id="priNavContent">
+                    <ul id="priNav">
+                        <li><a id="hlHomeLink" href="/default.aspx"><span>
+                            Login</span></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        
+
+        <!-- / primary navigation -->
+        <!-- site content -->
+        <div id="siteContentContWrapper">
+            <div id="siteContentCont">
+                <div id="siteContentWrapper">
+                    
+                    <!-- site content header -->
+                    <div id="siteContentHeader">
+                        <div id="pageTitleCont">
+                            
+                            
+                            
+                            <h1>
+                                
+CLIR
+    
+
+                            </h1>
+                        </div>
+                        <div id="topRightUserNavCont">
+                            
+
+                        </div>
+                        <div class="clearBothNoSPC">
+                        </div>
+                    </div>
+                    <!-- / site content header -->
+                    <!-- page content -->
+                    
+                    <div id="vsSummary" style="display:none;">
+
+</div>
+                    
+
+    <table style="width: 100%">
+        <tr>
+            <td style="width: 30%">
+                <br />
+                <table style="width: 100%">
+                    <tr>
+                        <th colspan="2">
+                            Enter your login information
+                        </th>
+                    </tr>
+                <tr>
+                        
+                        <td>
+                            Login ID: 
+                            <span class="requiredField">*</span>
+                       <br />
+                            <input name="ctl00$PageContent$tbLoginID" type="text" id="PageContent_tbLoginID" style="width: 160px" />
+                            <span id="PageContent_rfvLogin" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password: 
+                            <span class="requiredField">*</span>
+                            
+                        <br />
+                            <input name="ctl00$PageContent$tbPassword" type="password" id="PageContent_tbPassword" style="width: 160px" /> 
+                            <span id="PageContent_rfvPassword" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <a id="PageContent_hlForgotPassword" href="/profile/ForgotPassword.aspx">Forgot your password? Click here</a>
+                            <br />
+                            <input type="submit" name="ctl00$PageContent$btnLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PageContent$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="PageContent_btnLogin" />
+                            <span id="PageContent_cvLoginValidator" style="display:none;"></span>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 100%; margin-top: 20px">
+                    <tr>
+                        <th>
+                            New Users
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="PageContent_divCreateAccount">
+                                <a id="PageContent_hlCreateAccount" href="profile/CreateAccount_BasicInfo.aspx">Create a User Account</a><br />
+                            </div>
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 10px" />
+            <!-- spacer coloumn -->
+            <td valign="top">
+                <p>With this portal, you will have the capability to update your own membership information, renew your membership, and register for events.</p>
+<p>Please log in with your username and password in the box to the left. If you don't know your password, or you've forgotten it,
+<strong><a href="/ForgotPassword.aspx">reset your password</a></strong>.</p>
+            </td>
+        </tr>
+    </table>
+
+                    <!-- / page content -->
+                    <div class="clearBothNoSPC">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / site content -->
+        <!-- site footer -->
+        <div id="siteFooter">
+            <div id="siteFooterContent">
+                
+
+            </div>
+        </div>
+        <!-- / site footer -->
+    </div>
+    <!-- bottom footer -->
+    
+        <div style="float: right; font-size: 8pt">
+            <a href="http://www.membersuite.com" target="_blank">Association Management Software</a>
+            by <a href="http://www.membersuite.com" target="_blank">MemberSuite</a>
+        </div>
+        <div id="siteFooterLogoCont">
+            <font size="1">
+                
+                &nbsp;&nbsp; Core Version:
+                <span id="lblVersion">4.22.2.92</span></font>
+            <div class="clearBothNoSPC">
+            </div>
+        </div>
+    
+    <!-- / bottom footer -->
+    
+</div>
+    <!-- / site wrapper -->
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("vsSummary"));
+var Page_Validators =  new Array(document.getElementById("PageContent_rfvLogin"), document.getElementById("PageContent_rfvPassword"), document.getElementById("PageContent_cvLoginValidator"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var vsSummary = document.all ? document.all["vsSummary"] : document.getElementById("vsSummary");
+vsSummary.headertext = "We were unable to continue for the following reasons:";
+vsSummary.showmessagebox = "True";
+vsSummary.showsummary = "False";
+var PageContent_rfvLogin = document.all ? document.all["PageContent_rfvLogin"] : document.getElementById("PageContent_rfvLogin");
+PageContent_rfvLogin.controltovalidate = "PageContent_tbLoginID";
+PageContent_rfvLogin.errormessage = "Please enter a login ID";
+PageContent_rfvLogin.display = "None";
+PageContent_rfvLogin.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+PageContent_rfvLogin.initialvalue = "";
+var PageContent_rfvPassword = document.all ? document.all["PageContent_rfvPassword"] : document.getElementById("PageContent_rfvPassword");
+PageContent_rfvPassword.controltovalidate = "PageContent_tbPassword";
+PageContent_rfvPassword.errormessage = "Please enter a password";
+PageContent_rfvPassword.display = "None";
+PageContent_rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+PageContent_rfvPassword.initialvalue = "";
+var PageContent_cvLoginValidator = document.all ? document.all["PageContent_cvLoginValidator"] : document.getElementById("PageContent_cvLoginValidator");
+PageContent_cvLoginValidator.errormessage = "CustomValidator";
+PageContent_cvLoginValidator.display = "None";
+PageContent_cvLoginValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('vsSummary');
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"ctl00_rwmWindowManager_ClientState","formID":"form1","iconUrl":"","minimizeIconUrl":"","name":"rwmWindowManager","skin":"Default","windowControls":"[]"}, null, null, $get("ctl00_rwmWindowManager"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":32,"clientStateFieldID":"ctl00_rwTimeoutWarning_ClientState","formID":"form1","height":"225px","iconUrl":"","left":"-10000px","minimizeIconUrl":"","name":"rwTimeoutWarning","navigateUrl":"/KeepAlive.aspx","skin":"Default","title":"Inactivity Warning","top":"-10000px","visibleOnPageLoad":true,"visibleStatusbar":false,"width":"300px"}, {"close":OnTimeoutWindowClose}, null, $get("ctl00_rwTimeoutWarning"));
+});
+
+document.getElementById('PageContent_rfvLogin').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('PageContent_rfvLogin'));
+}
+
+document.getElementById('PageContent_rfvPassword').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('PageContent_rfvPassword'));
+}
+
+document.getElementById('PageContent_cvLoginValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('PageContent_cvLoginValidator'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        // Fix Telerik control on zoomed-in Chrome browser:  http://www.telerik.com/forums/system-formatexception-input-string-was-not-in-a-correct-format-thrown-on-chrome-when-browser-is-zoomed-in-out
+        if (Telerik && Telerik.Web.UI.RadListBox) {
+            Telerik.Web.UI.RadListBox.prototype.saveClientState = function () {
+                return "{" +
+                    "\"isEnabled\":" + this._enabled +
+                    ",\"logEntries\":" + this._logEntriesJson +
+                    ",\"selectedIndices\":" + this._selectedIndicesJson +
+                    ",\"checkedIndices\":" + this._checkedIndicesJson +
+                    ",\"scrollPosition\":" + Math.round(this._scrollPosition) +
+                    "}";
+            }
+        }
+
+        var originalGetLocation = $telerik.getLocation;
+        $telerik.getLocation = function (a) {
+            var point = originalGetLocation(a);
+            ////alert(point.y);
+            point.rawX = Math.round(point.rawX);
+            point.rawY = Math.round(point.rawY);
+            point.x = Math.round(point.x);
+            point.y = Math.round(point.y);
+            ////alert(point.y);
+            return point;
+        };
+    </script>
+</body>
+</html>
+
