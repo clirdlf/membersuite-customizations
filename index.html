@@ -80,64 +80,64 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
 
     <div id="ctl00_rwmWindowManager" style="display:none;">
 	<!-- 2011.1.519.40 --><div id="ctl00_rwmWindowManager_alerttemplate" style="display:none;">
-		<div class="rwDialogPopup radalert">			
+		<div class="rwDialogPopup radalert">
 			<div class="rwDialogText">
-			{1}				
+			{1}
 			</div>
-			
+
 			<div>
 				<a  onclick="$find('{0}').close(true);"
 				class="rwPopupButton" href="javascript:void(0);">
 					<span class="rwOuterSpan">
 						<span class="rwInnerSpan">##LOC[OK]##</span>
 					</span>
-				</a>				
+				</a>
 			</div>
 		</div>
 		</div><div id="ctl00_rwmWindowManager_prompttemplate" style="display:none;">
-		 <div class="rwDialogPopup radprompt">			
+		 <div class="rwDialogPopup radprompt">
 			    <div class="rwDialogText">
-			    {1}				
-			    </div>		
+			    {1}
+			    </div>
 			    <div>
 				    <script type="text/javascript">
 				    function RadWindowprompt_detectenter(id, ev, input)
-				    {							
-					    if (!ev) ev = window.event;                
+				    {
+					    if (!ev) ev = window.event;
 					    if (ev.keyCode == 13)
-					    {															        
-					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					    {
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];
 					        if (but)
-						    {							
+						    {
 							    if (but.click) but.click();
 							    else if (but.onclick)
 							    {
-							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);
 							    }
 						    }
 					       return false;
-					    } 
+					    }
 					    else return true;
-				    }	 
+				    }
 				    </script>
 				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
 			    </div>
 			    <div>
-				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"
 					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
 				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
 			    </div>
-		    </div>				       
+		    </div>
 		</div><div id="ctl00_rwmWindowManager_confirmtemplate" style="display:none;">
-		<div class="rwDialogPopup radconfirm">			
+		<div class="rwDialogPopup radconfirm">
 			<div class="rwDialogText">
-			{1}				
-			</div>						
+			{1}
+			</div>
 			<div>
 				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
 				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
 			</div>
-		</div>		
+		</div>
 		</div><input id="ctl00_rwmWindowManager_ClientState" name="ctl00_rwmWindowManager_ClientState" type="hidden" />
 </div>
     <div id="ctl00_rwTimeoutWarning" style="display:none;">
@@ -147,8 +147,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
 </div>
     <!-- Inline Styles -->
     <style type="text/css">
-          
-    
+
+
 #siteContentWrapper
 {
 	padding: 20px 0px 30px 20px;
@@ -345,44 +345,44 @@ p.small {
 		<div class="top">
 			<h1 id="title" class="hidden"><span id="logo">CLIR+DLF <span>Portal</span></span></h1>
 		</div>
-		
+
     <div id="SkinBodyContent">
         <!-- / site header -->
         <!-- primary navigation -->
-        
+
             <div id="priNavCont">
                 <div id="priNavContent">
                     <ul id="priNav">
                         <li><a id="hlHomeLink" href="/default.aspx"><span>
                             Login</span></a></li>
-                        
+
                     </ul>
                 </div>
             </div>
-        
-        
+
+
 
         <!-- / primary navigation -->
         <!-- site content -->
         <div id="siteContentContWrapper">
             <div id="siteContentCont">
                 <div id="siteContentWrapper">
-                    
+
                     <!-- site content header -->
                     <div id="siteContentHeader">
                         <div id="pageTitleCont">
-                            
-                            
-                            
+
+
+
                             <h1>
-                                
+
 CLIR
-    
+
 
                             </h1>
                         </div>
                         <div id="topRightUserNavCont">
-                            
+
 
                         </div>
                         <div class="clearBothNoSPC">
@@ -390,11 +390,11 @@ CLIR
                     </div>
                     <!-- / site content header -->
                     <!-- page content -->
-                    
+
                     <div id="vsSummary" style="display:none;">
 
 </div>
-                    
+
 
     <table style="width: 100%">
         <tr>
@@ -407,9 +407,9 @@ CLIR
                         </th>
                     </tr>
                 <tr>
-                        
+
                         <td>
-                            Login ID: 
+                            Login ID:
                             <span class="requiredField">*</span>
                        <br />
                             <input name="ctl00$PageContent$tbLoginID" type="text" id="PageContent_tbLoginID" style="width: 160px" />
@@ -418,11 +418,11 @@ CLIR
                     </tr>
                     <tr>
                         <td>
-                            Password: 
+                            Password:
                             <span class="requiredField">*</span>
-                            
+
                         <br />
-                            <input name="ctl00$PageContent$tbPassword" type="password" id="PageContent_tbPassword" style="width: 160px" /> 
+                            <input name="ctl00$PageContent$tbPassword" type="password" id="PageContent_tbPassword" style="width: 160px" />
                             <span id="PageContent_rfvPassword" style="display:none;"></span>
                         </td>
                     </tr>
@@ -446,9 +446,9 @@ CLIR
                             <div id="PageContent_divCreateAccount">
                                 <a id="PageContent_hlCreateAccount" href="profile/CreateAccount_BasicInfo.aspx">Create a User Account</a><br />
                             </div>
-                            
-                            
-                            
+
+
+
                         </td>
                     </tr>
                 </table>
@@ -456,6 +456,7 @@ CLIR
             <td style="width: 10px" />
             <!-- spacer coloumn -->
             <td valign="top">
+              <h2>Welcome!</h2>
                 <p>With this portal, you will have the capability to update your own membership information, renew your membership, and register for events.</p>
 <p>Please log in with your username and password in the box to the left. If you don't know your password, or you've forgotten it,
 <strong><a href="/ForgotPassword.aspx">reset your password</a></strong>.</p>
@@ -473,32 +474,32 @@ CLIR
         <!-- site footer -->
         <div id="siteFooter">
             <div id="siteFooterContent">
-                
+
 
             </div>
         </div>
         <!-- / site footer -->
     </div>
     <!-- bottom footer -->
-    
+
         <div style="float: right; font-size: 8pt">
             <a href="http://www.membersuite.com" target="_blank">Association Management Software</a>
             by <a href="http://www.membersuite.com" target="_blank">MemberSuite</a>
         </div>
         <div id="siteFooterLogoCont">
             <font size="1">
-                
+
                 &nbsp;&nbsp; Core Version:
                 <span id="lblVersion">4.22.2.92</span></font>
             <div class="clearBothNoSPC">
             </div>
         </div>
-    
+
     <!-- / bottom footer -->
-    
+
 </div>
     <!-- / site wrapper -->
-    
+
 <script type="text/javascript">
 //<![CDATA[
 var Page_ValidationSummaries =  new Array(document.getElementById("vsSummary"));
@@ -607,4 +608,3 @@ document.getElementById('PageContent_cvLoginValidator').dispose = function() {
     </script>
 </body>
 </html>
-
