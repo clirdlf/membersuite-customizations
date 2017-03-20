@@ -43,7 +43,7 @@ You will need PHP and Ruby to run this project. Ruby dependencies can be install
 
 - Start up the processes (`foreman start`).
 - Remove the hard-coded CSS in `customer26007fb00.portal.membersuite.com/Login.aspx.html` (around line 106)
-- Link to the css file (`<link href="../css/style.css"`)
+- Link to the css file (`<link href="../css/style.css" />`)
 - Open your browser to <http://localhost:8000/customer26007fb00.portal.membersuite.com/Login.aspx.html>
 - Edit `_scss/style.css`
 
