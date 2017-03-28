@@ -8,9 +8,9 @@
   #siteContentContWrapper #pageTitleCont h1 { font-size: 2em; color: #666; font-family: 'Lato', sans-serif; font-weight: bold; }
   #siteContentContWrapper #siteContentWrapper { margin-top: 10px; padding: 15px 30px; }
   #priNavCont { height: 21px; }
-  #priNavCont li { background-color: #665851; font-family: 'Lato', sans-serif; font-weight: 400; letter-spacing: 1px; border-radius: 2px; }
+  #priNavCont li { background-color: #665851; font-family: 'Lato', sans-serif; letter-spacing: 1px; border-radius: 2px; }
   #priNavCont li a { background: none; }
-  #priNavCont li a span { background: none; }
+  #priNavCont li a span { font-weight: 400; background: none; }
   a#hlHomeLink { display: none; }
   .top h1#title { font-family: 'Roboto Slab', serif; font-weight: 300; font-size: 3.2em; color: white; text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); margin: 0 auto; padding-top: 32px; max-width: 300px; text-align: center; position: relative; top: 0px; line-height: 1.4em; }
   .top h1#title span span { font-weight: 400; }
