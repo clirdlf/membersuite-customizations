@@ -2,6 +2,7 @@
 @import "https://cdn.rawgit.com/clirdlf/logo-fonts/master/style.min.css";
 @import "https://cdn.rawgit.com/clirdlf/logo-fonts/master/clir-font/stylesheet.min.css";
 @media screen { h2 { font-family: 'Lato', sans-serif; font-size: 1.4em; letter-spacing: 1px; line-height: 1.5em; color: #666; }
+  #PageContent_ucMembership_divMembership ul li { display: none; }
   #SkinBodyContent { width: 920px; margin: 0 auto; }
   #siteContentHeader { padding-top: 10px; }
   #siteContentContWrapper { background-color: #fff; box-shadow: 0 5px 50px rgba(0, 0, 0, 0.4); }
@@ -44,5 +45,3 @@
   #logo { -webkit-animation-duration: 1s; -webkit-animation-delay: 2s; }
   .login-box { -webkit-animation-duration: 1s; -webkit-animation-delay: 1s; } }
 @media print { input { display: none; } }
-
-/*# sourceMappingURL=style.css.map */
